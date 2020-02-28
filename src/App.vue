@@ -1,81 +1,75 @@
 <template>
   <div id="app">
-    <Navigation></Navigation>
-    <router-view></router-view>
+  
+    <Toolbar></Toolbar>
+
+    <md-whiteframe style="background:white">
+      <!-- <md-input-container>
+        <md-button class="md-icon-button">
+          <md-icon>search</md-icon>
+        </md-button>
+        <md-input placeholder="Search for Jobs"></md-input>
+      </md-input-container> -->
+    </md-whiteframe>
+  
+    <md-layout md-gutter>
+     
+      <md-layout>
+        <router-view></router-view>
+
+
+      </md-layout>
+
+    </md-layout>
+
+
+    <md-layout>
+
+        <div style="color:teal; margin:10px;">
+        
+        <hr style="border: 1px solid teal;
+    display: block;
+    height: 2px;
+    margin: 1.5rem 0;"/>
+        <p >
+            <a href="http://lambdademy.com" style="color:teal">
+            <b>LambdaDemy</b> </a> |  Học thực tiễn - Làm thực tế <br/>
+              Lầu 2, Tòa nhà F Central, 16A Lê Hồng Phong, Phường 12, Quận 10, TP.HCM
+          <br/>
+          <a href="https://fb.me/LambdaDemy" style="color:teal">FB @ LambdaDemy</a>
+            <br/>
+            Phone: 0898 698 288<br/>
+            Email: bonjour@LambdaDemy.com 
+          </p>
+        
+        </div>
+    </md-layout>
+
+  
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation'
-
+import Toolbar from '@/components/includes/Toolbar.vue';
 export default {
   name: 'app',
-  components: {
-    Navigation
-  }
+  components: { Toolbar },
 }
 </script>
 
-<style lang="scss">
-@import url('../node_modules/flexboxgrid/dist/flexboxgrid.css');
-$logo-font-family: 'Dosis', serif;
-$base-font-family: 'Open Sans', sans-serif;
-$base-font-size: 10px;
-$base-color: rgb(0,0,0);
-$alt-color: rgb(255, 255, 255);
-$gray-color: rgb(191, 191, 191);
-$gray-color-hover: rgba(191, 191, 191, 0.5);
-$light-gray-color: rgb(155, 155, 155);
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: $base-font-size;
-  color: $base-color;
-  font-family: $base-font-family;
-}
-
+<style>
 body {
-  margin: 0;
-  padding: 0;
+  background: #fcfcfc
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: 5rem;
-}
-
-h2 {
-  font-size: 4.2rem;
-}
-
-h3 {
-  font-size: 3.6rem;
-}
-
-h4 {
-  font-size: 3.0rem;
-}
-
-h5 {
-  font-size: 2.4rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-}
-
 #app {
+  
+  margin: 0 auto;
+}
+
+h2.md-title {
+  cursor: pointer
+}
+h1, h2, h3 {
+  color: teal;
 }
 </style>
